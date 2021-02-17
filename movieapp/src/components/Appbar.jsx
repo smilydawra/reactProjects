@@ -1,6 +1,5 @@
-import { Button } from 'bootstrap';
 import React from 'react';
-import { Form, FormControl, Nav, Navbar } from 'react-bootstrap';
+import { Button, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 
 const Appbar = () => {
     return (
@@ -14,7 +13,7 @@ const Appbar = () => {
                 </Nav>
                 <Form inline>
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    {/* <Button variant="outline-light">Search</Button> */}
+                    <Button variant="outline-light">Search</Button>
                 </Form>
             </Navbar>
         </div>
