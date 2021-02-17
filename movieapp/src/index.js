@@ -1,13 +1,21 @@
 import React from 'react';
+import { configureStore } from '@reduxjs/toolkit';
 import ReactDOM from 'react-dom';
+import Wrapper from './Wrapper';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import dataReducer from './reducer/dataReducer';
+
+const store = configureStore({ reducer: dataReducer });
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <Wrapper>
+      <App />
+    </Wrapper>
+  </Provider>,
   document.getElementById('root')
 );
 
