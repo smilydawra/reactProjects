@@ -1,4 +1,5 @@
-import { Button, Card, Nav } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import CardsButton from './CardsButton';
 
 const renderCard = (data, index) => {
     return (
@@ -9,8 +10,7 @@ const renderCard = (data, index) => {
                 <Card.Text>
                     {data.Year}
                 </Card.Text>
-                {/* <Button variant="primary">more info...</Button> */}
-                <Nav.Link href="#home">more info...</Nav.Link>
+                <CardsButton data={data} />
             </Card.Body>
         </Card>
     )

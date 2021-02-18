@@ -4,13 +4,12 @@ import { setMoviesData } from './reducer/dataReducer'
 
 const Wrapper = ({ children }) => {
     const dispatch = useDispatch();
-    // const [movies, setMovies] = useState([]);
     useEffect(async () => {
         try {
-            const a = await fetch("https://fake-movie-database-api.herokuapp.com/api?s=batman")
+            const { Search } = await fetch("https://fake-movie-database-api.herokuapp.com/api?s=batman")
                 .then(resp => resp.json())
-                .then(data => dispatch(setMoviesData(data.Search)));
-            // .then(data => dispatch(addMoviesData(convertToObject(data.Search))));
+                .then(data => data);
+            dispatch(setMoviesData(Search))
         } catch (e) {
             console.log(e);
         }

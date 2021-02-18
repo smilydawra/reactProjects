@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import CardTemplate from '../components/CardTemplate';
+import DetailModal from '../components/DetailModal';
 import Header from '../components/Header';
 
 const Main = styled.main`
@@ -11,6 +12,7 @@ justify-content: flex-start;
 
 const Homepage = () => {
     const [movies, setMovies] = useState([]);
+    const [modalShow, setModalShow] = useState(false);
     useEffect(async () => {
         try {
             await fetch("https://fake-movie-database-api.herokuapp.com/api?s=batman")
@@ -20,6 +22,7 @@ const Homepage = () => {
             console.log(e);
         }
     }, []);
+
     return (
         <div>
             <Header />

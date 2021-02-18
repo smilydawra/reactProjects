@@ -6,9 +6,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import dataReducer from './reducer/dataReducer';
+import { rootReducer } from './reducer/rootReducer';
 
-const store = configureStore({ reducer: dataReducer });
+const store = configureStore({ reducer: rootReducer });
 
 ReactDOM.render(
   <Provider store={store}>
