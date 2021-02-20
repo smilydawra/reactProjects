@@ -13,6 +13,7 @@ const ContentWrapper = styled(Box)`
   flex-direction: column;
   background: #f3f3f3;
   width: 100%;
+  position: relative;
 `;
 
 const Page = ({ path, page }) => {
@@ -30,12 +31,9 @@ const Page = ({ path, page }) => {
                 <SideBar />
                 <ContentWrapper
                     as="main"
-                    // ml={{ base: 0, lg: '55px' }}
                     ml="189px"
-                // w={{ base: '100%', lg: 'calc(100% - 55px)' }}
-
                 >
-                    <Container>
+                    <Container margin="0 auto 30px auto">
                         {renderRoute()}
                     </Container>
 

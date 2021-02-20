@@ -27,7 +27,7 @@ const Dashboard = () => {
                     bgColor="#2365e8"
                     color="#fff" m="15px 0">Upgrade</Button>
             </Box>
-            <Flex justifyContent="space-between" flexDirection="row">
+            <Flex justifyContent="space-between" flexDirection={["row"]} flexWrap="wrap">
                 {attributes.map((item) => {
                     return (
                         <Box key={item.id}>

@@ -1,15 +1,21 @@
 import { Box, Text } from '@chakra-ui/react'
+import styled from '@emotion/styled'
 import React from 'react'
 import Container from '../common/Container'
+
+const FooterBox = styled(Box)`
+bottom: 0;
+width: 100%;
+height: 100%;
+border-top: 1px solid #dedede;
+`;
 
 const Footer = () => {
     return (
         <Box>
-            <Container>
-                <Box m="15px 0" style={{ borderTop: "1px solid #333" }}>
-                    Footer
-                </Box>
-            </Container>
+            <FooterBox>
+                <Box m="0 36px" color="#a19d9d" py={3}><small>{`\u0040`} Copyrights - Dummy Design 2021 All Rights Reserved</small></Box>
+            </FooterBox>
         </Box>
     )
 }

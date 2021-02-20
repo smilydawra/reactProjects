@@ -1,10 +1,11 @@
+import { Box } from '@material-ui/core'
 import React from 'react'
 
 const MenuItemTwo = () => {
     return (
-        <div>
+        <Box height="100vh">
             Menu item content here!
-        </div>
+        </Box>
     )
 }
 
