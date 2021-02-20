@@ -7,3 +7,14 @@ body {
     background-color: #d9e6fc;
     border-right: 3px solid #2365e8;
 }
+
+.circle{
+    border-radius:50%;
+    background:rgba(217, 230, 252,0.3);
+    color:white;
+    width:100px;
+    height:100px;
+    text-align:center;
+    z-index: 1000;
+    line-height:100px;
+  }
