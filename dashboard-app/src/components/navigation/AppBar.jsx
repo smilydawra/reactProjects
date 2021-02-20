@@ -20,8 +20,8 @@ const AppBar = () => {
                     <Box>
                         <Heading
                             size="md"
-                            px={31}
-                            fontWeight={500}
+                            px="41px"
+                            fontWeight={700}
                             color="#2365e8"
                         >
                             LOGO HERE

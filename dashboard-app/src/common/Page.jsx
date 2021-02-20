@@ -1,11 +1,11 @@
-import { Box, Flex } from '@chakra-ui/react'
-import React from 'react'
-import AppBar from '../components/navigation/AppBar'
-import Dashboard from '../components/Dashboard'
-import Container from '../common/Container'
+import { Flex, Box } from '@chakra-ui/react'
 import styled from '@emotion/styled'
+import React from 'react'
+import { Route } from 'react-router-dom'
 import Footer from '../components/Footer'
+import AppBar from '../components/navigation/AppBar'
 import SideBar from '../components/navigation/SideBar'
+import Container from './Container';
 
 const ContentWrapper = styled(Box)`
   justify-content: space-between;
@@ -15,7 +15,14 @@ const ContentWrapper = styled(Box)`
   width: 100%;
 `;
 
-const LandingPage = () => {
+const Page = ({ path, page }) => {
+    const renderRoute = () => {
+        return (
+            <Route
+                path={path}
+                component={page} />
+        )
+    }
     return (
         <>
             <AppBar />
@@ -24,13 +31,14 @@ const LandingPage = () => {
                 <ContentWrapper
                     as="main"
                     // ml={{ base: 0, lg: '55px' }}
-                    ml="169px"
+                    ml="189px"
                 // w={{ base: '100%', lg: 'calc(100% - 55px)' }}
 
                 >
                     <Container>
-                        <Dashboard />
+                        {renderRoute()}
                     </Container>
+
                     <Footer />
                 </ContentWrapper>
             </Flex>
@@ -38,4 +46,4 @@ const LandingPage = () => {
     )
 }
 
-export default LandingPage
+export default Page

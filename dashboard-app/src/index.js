@@ -2,14 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import App from './App';
 // import AppRouter from './AppRouter';
-import LandingPage from './pages/LandingPage';
+// import LandingPage from './pages/LandingPage';
+import AppRouter from './AppRouter'
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from "@chakra-ui/react"
+import './index.css'
 
 ReactDOM.render(
   <ChakraProvider>
     {/* <App /> */}
-    <LandingPage />
+    {/* <LandingPage /> */}
+    <AppRouter />
   </ChakraProvider>,
   document.getElementById('root')
 );
