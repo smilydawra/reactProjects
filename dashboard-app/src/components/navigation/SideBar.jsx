@@ -40,7 +40,7 @@ const SideBar = () => {
                     <NavItem
                         path="/"
                         icon={<FiMonitor />}
-                        name="Menu Option 1"
+                        name="Dashboard"
                         location={urlPath.pathname}
                     />
                     <NavItem
