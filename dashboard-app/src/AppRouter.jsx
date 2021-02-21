@@ -9,11 +9,11 @@ const AppRouter = () => {
         <Router>
             <Switch>
                 <Page exact path="/" page={Dashboard} />
-                <Page exact path="/menu-item-2" page={MenuItemTwo} />
-                <Page exact path="/menu-item-3" page={MenuItemTwo} />
-                <Page exact path="/menu-item-4" page={MenuItemTwo} />
-                <Page exact path="/menu-item-5" page={MenuItemTwo} />
-                <Page exact path="/menu-item-6" page={MenuItemTwo} />
+                <Page exact path="/menu-option-2" page={MenuItemTwo} />
+                <Page exact path="/menu-option-3" page={MenuItemTwo} />
+                <Page exact path="/menu-option-4" page={MenuItemTwo} />
+                <Page exact path="/menu-option-5" page={MenuItemTwo} />
+                <Page exact path="/menu-option-6" page={MenuItemTwo} />
                 <Page exact path="/settings" page={MenuItemTwo} />
             </Switch>
         </Router>

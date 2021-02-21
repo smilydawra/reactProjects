@@ -20,7 +20,7 @@ const AppBar = () => {
                     <Box>
                         <Heading
                             size="md"
-                            px="41px"
+                            px="50px"
                             fontWeight={700}
                             color="#2365e8"
                         >

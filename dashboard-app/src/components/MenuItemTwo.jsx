@@ -1,4 +1,4 @@
-import { Box } from '@material-ui/core'
+import { Box } from '@chakra-ui/react'
 import React from 'react'
 
 const MenuItemTwo = () => {

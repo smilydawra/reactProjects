@@ -5,14 +5,6 @@ import Graph from './Graph'
 import attributes from '../db'
 
 const Dashboard = () => {
-    const [attributeData, setAttributeData] = useState([]);
-    useEffect(async () => {
-        const result = await fetch('db.js').then(res => res.json()).then((data) => {
-            setAttributeData(data.attributes);
-        })
-        return result;
-    }, [])
-
     return (
         <Box>
             <Box display="flex"
@@ -21,7 +13,7 @@ const Dashboard = () => {
             >
                 <Button size="md"
                     lineHeight="10px"
-                    width="130px"
+                    width="160px"
                     variant="solid"
                     borderRadius="30px"
                     bgColor="#2365e8"

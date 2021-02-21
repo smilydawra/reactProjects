@@ -1,11 +1,11 @@
 import React from 'react'
 import { ExternalLinkIcon, SettingsIcon, SmallAddIcon } from '@chakra-ui/icons'
-import { Box, Flex, Stack, Text, VStack } from '@chakra-ui/react'
-import { Link, useLocation, useParams } from 'react-router-dom'
+import { Box, Flex, Stack } from '@chakra-ui/react'
+import { Link, useLocation } from 'react-router-dom'
 import { FiMonitor } from 'react-icons/fi'
 import { RiBriefcase3Line } from 'react-icons/ri'
 import { AiOutlineLayout } from 'react-icons/ai'
-import { HiOutlineCube } from 'react-icons/hi'
+import { HiOutlineArrowNarrowRight, HiOutlineCube } from 'react-icons/hi'
 import { GiTrophyCup } from 'react-icons/gi'
 
 const NavItem = ({ icon, path, name, location, iconTwo, height = 'auto', lineHeight = "auto" }) => {
@@ -13,7 +13,7 @@ const NavItem = ({ icon, path, name, location, iconTwo, height = 'auto', lineHei
         <Flex as="li" py={2} px={3}
             style={{ marginTop: "0" }}
             cursor="pointer"
-            _hover={{ bg: '#eee', color: '#fff' }}
+            _hover={{ bg: '#2365e8', color: '#fff' }}
             className={location === path ? 'active' : ""} h={height} lineHeight={lineHeight}>
             <Link to={path}>
                 <Flex fontSize="sm" alignItems="center">
@@ -33,49 +33,51 @@ const SideBar = () => {
             display='block'
             position="fixed"
             h={window.outerHeight}
-            w="190px"
+            w="210px"
             boxShadow="sm">
             <Stack spacing="223px">
                 <Box>
                     <NavItem
                         path="/"
                         icon={<FiMonitor />}
-                        name="Menu Item 1"
+                        name="Menu Option 1"
                         location={urlPath.pathname}
                     />
                     <NavItem
-                        path="/menu-item-2"
+                        path="/menu-option-2"
                         icon={<RiBriefcase3Line />}
-                        name="Menu Item 2"
+                        name="Menu Option 2"
                         location={urlPath.pathname}
                         iconTwo={<SmallAddIcon />}
                     />
                     <NavItem
-                        path="/menu-item-3"
+                        path="/menu-option-3"
                         icon={<ExternalLinkIcon />}
-                        name="Menu Item 3"
+                        name="Menu Option 3"
                         location={urlPath.pathname}
                         iconTwo={<SmallAddIcon />}
                     />
                     <NavItem
-                        path="/menu-item-4"
+                        path="/menu-option-4"
                         icon={<AiOutlineLayout />}
-                        name="Menu Item 4"
+                        name="Menu Option 4"
                         location={urlPath.pathname}
                     />
                     <NavItem
-                        path="/menu-item-5"
+                        path="/menu-option-5"
                         icon={<HiOutlineCube />}
-                        name="Menu Item 5"
+                        name="Menu Option 5"
                         location={urlPath.pathname}
+                        iconTwo={<HiOutlineArrowNarrowRight />}
                     />
                 </Box>
                 <Box>
                     <NavItem
-                        path="/menu-item-6"
+                        path="/menu-option-6"
                         icon={<GiTrophyCup />}
-                        name="Menu Item 6"
+                        name="Menu Option 6"
                         location={urlPath.pathname}
+                        iconTwo={<HiOutlineArrowNarrowRight />}
                     />
                     <NavItem
                         path="/settings"

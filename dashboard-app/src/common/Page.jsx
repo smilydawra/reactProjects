@@ -31,7 +31,7 @@ const Page = ({ path, page }) => {
                 <SideBar />
                 <ContentWrapper
                     as="main"
-                    ml="189px"
+                    ml="210px"
                 >
                     <Container margin="0 auto 30px auto">
                         {renderRoute()}
