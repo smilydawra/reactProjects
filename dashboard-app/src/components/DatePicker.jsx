@@ -32,7 +32,6 @@ const Datepicker = () => {
                 <Input type="text" style={{ caretColor: "transparent", borderWidth: "0", border: "none" }} cursor="pointer" outline="none" width="255px" value={dateRange} size="sm" />
                 <Box mt={1} pr={3} cursor="pointer">&#128197;</Box>
             </Flex>
-            {/* <Box as="input" >hello{console.log(state[0].startDate)}</Box> */}
             <Box style={{ display }}>
                 <DateRangePicker
                     showDateDisplay={true}
