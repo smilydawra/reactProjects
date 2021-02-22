@@ -1,9 +1,9 @@
 import { Box, Button, Flex } from '@chakra-ui/react'
 import React from 'react'
-import AttributeCard from './AttributeCard'
-import Graph from './Graph'
+import AttributeCard from '../components/AttributeCard'
+import Graph from '../components/Graph'
 import attributes from '../db'
-import DatePicker from './DatePicker'
+import DatePicker from '../components/DatePicker'
 
 const Dashboard = () => {
     return (

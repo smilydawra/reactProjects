@@ -1,7 +1,6 @@
-import { Box, Text } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import React from 'react'
-import Container from '../common/Container'
 
 const FooterBox = styled(Box)`
 bottom: 0;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import Page from './common/Page';
-import Dashboard from './components/Dashboard';
-import MenuItemTwo from './components/MenuItemTwo';
+import Dashboard from './pages/Dashboard';
+import MenuItemTwo from './pages/MenuItemTwo';
 
 const AppRouter = () => {
     return (
