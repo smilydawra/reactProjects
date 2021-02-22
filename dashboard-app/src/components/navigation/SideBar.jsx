@@ -1,3 +1,6 @@
+/**
+ * SideBar component for all the menu options
+ */
 import React from 'react'
 import { ExternalLinkIcon, SettingsIcon, SmallAddIcon } from '@chakra-ui/icons'
 import { Box, Flex, Stack } from '@chakra-ui/react'

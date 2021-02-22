@@ -1,3 +1,7 @@
+/**
+ * Page Component
+ * common page configuration for the menu options Routes 
+ */
 import { Flex, Box } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import React from 'react'

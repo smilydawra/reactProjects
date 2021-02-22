@@ -1,3 +1,6 @@
+/**
+ * Dashboard contains skeleton of the menu option one 
+ */
 import { Box, Button, Flex } from '@chakra-ui/react'
 import React from 'react'
 import AttributeCard from '../components/AttributeCard'

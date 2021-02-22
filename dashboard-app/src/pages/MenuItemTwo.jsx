@@ -1,3 +1,7 @@
+/**
+ * This component is a dummy component to show implementation
+ * of other menu options data with different routes option
+ */
 import { Box } from '@chakra-ui/react'
 import React from 'react'
 

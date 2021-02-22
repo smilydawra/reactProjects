@@ -1,3 +1,6 @@
+/**
+ * AttributeCard Component can use dynamic content to diplay cards
+ */
 import { Box, Flex } from '@chakra-ui/react'
 import React from 'react'
 

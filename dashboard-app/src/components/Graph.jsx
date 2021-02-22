@@ -1,3 +1,7 @@
+/**
+ * Graph component contains graph implementation
+ * using react-chartjs and attributes data stored in db.js
+ */
 import { Box, HStack } from '@chakra-ui/react'
 import React from 'react'
 import { Line } from 'react-chartjs-2';

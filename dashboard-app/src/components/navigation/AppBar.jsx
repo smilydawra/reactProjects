@@ -1,5 +1,9 @@
-import { ChevronDownIcon, TriangleDownIcon } from '@chakra-ui/icons'
-import { Avatar, Button, Box, Flex, Heading, Image, Menu, MenuButton, MenuItem, MenuList, Text, Wrap, WrapItem, Stack, Icon } from '@chakra-ui/react'
+/**
+ * Appbar component
+ * header with top navigation
+ */
+import { ChevronDownIcon } from '@chakra-ui/icons'
+import { Avatar, Button, Box, Flex, Heading, Menu, MenuButton, MenuItem, MenuList, Icon } from '@chakra-ui/react'
 import React from 'react'
 
 const AppBar = () => {

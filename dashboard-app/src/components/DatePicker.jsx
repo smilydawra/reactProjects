@@ -1,3 +1,7 @@
+/**
+ * DatePicker component
+ * Used react-date-range library to implement date range picker with date-fns library
+ */
 import { DateRangePicker } from 'react-date-range';
 import { addDays } from 'date-fns';
 import { useState } from 'react';

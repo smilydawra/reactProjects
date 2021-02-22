@@ -1,3 +1,7 @@
+/** 
+ * Container component
+ * Main Container for all menu options
+ */
 import React from 'react';
 import { Box } from '@chakra-ui/react';
 
