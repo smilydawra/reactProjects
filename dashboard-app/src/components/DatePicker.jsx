@@ -33,7 +33,7 @@ const Datepicker = () => {
     return (
         <>
             <Flex mt={4} onClick={handleToggle} justifyContent="space-between" style={{ border: "1px solid #eee" }}>
-                <Input type="text" style={{ caretColor: "transparent", borderWidth: "0", border: "none" }} cursor="pointer" outline="none" width="255px" value={dateRange} size="sm" />
+                <Input type="text" style={{ borderWidth: "0", border: "none" }} cursor="pointer" outline="none" width="255px" value={dateRange} readOnly size="sm" />
                 <Box mt={1} pr={3} cursor="pointer">&#128197;</Box>
             </Flex>
             <Box style={{ display }}>
