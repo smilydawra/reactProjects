@@ -3,7 +3,7 @@ import React from 'react'
 
 const MenuItemTwo = () => {
     return (
-        <Box height="100vh">
+        <Box height="77vh">
             Menu item content here!
         </Box>
     )

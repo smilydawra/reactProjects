@@ -1,8 +1,9 @@
 import { Box, Button, Flex } from '@chakra-ui/react'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import AttributeCard from './AttributeCard'
 import Graph from './Graph'
 import attributes from '../db'
+import DatePicker from './DatePicker'
 
 const Dashboard = () => {
     return (
@@ -28,7 +29,12 @@ const Dashboard = () => {
                     )
                 })}
             </Flex>
-            <Graph />
+            <Box m="20px 0" px={5} boxShadow="sm" h="auto" bgColor="#fff">
+                <Flex alignItems="flex-end" flexDirection="column" mr={5}>
+                    <DatePicker />
+                </Flex>
+                <Graph />
+            </Box>
         </Box>
     )
 }

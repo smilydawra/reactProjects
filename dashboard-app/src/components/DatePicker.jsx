@@ -1,41 +1,52 @@
-import React, { useState } from 'react';
-import "react-dates/initialize";
-import { DateRangePicker } from "react-dates";
-import "react-dates/lib/css/_datepicker.css";
+import { DateRangePicker } from 'react-date-range';
+import { addDays } from 'date-fns';
+import { useState } from 'react';
+import 'react-date-range/dist/styles.css'; // main css file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+import { Box, Flex, Input } from '@chakra-ui/react';
 
-const DatePicker = () => {
-    const [startDate, setStartDate] = useState(null);
-    const [endDate, setEndDate] = useState(null);
-    const [endDateFormatted, setEndDateFormatted] = useState(null);
-    const [startDateFormatted, setStartDateFormatted] = useState(null);
-    const [focusedInput, setFocusedInput] = useState(null)
-
-    const hundleDateChange = (startDate, endDate) => {
-        setStartDate(startDate);
-        setEndDate(endDate);
-        if (startDate != null) {
-            setStartDateFormatted(startDate.format("D-MM-Y"));
+const Datepicker = () => {
+    const [display, setDisplay] = useState("none");
+    const [state, setState] = useState([
+        {
+            startDate: new Date(),
+            endDate: addDays(new Date(), 7),
+            key: 'selection'
         }
-        if (endDate != null) {
-            setEndDateFormatted(endDate.format("D-MM-Y"));
+    ]);
+
+    const startDateFormatted = state[0].startDate.toDateString();
+    const endDateFormatted = state[0].endDate.toDateString();
+    const dateRange = startDateFormatted + " - " + endDateFormatted;
+
+    const handleToggle = () => {
+        if (display === 'none') {
+            setDisplay("block");
+        } else {
+            setDisplay("none");
         }
     }
-
     return (
-        <div>
-            <DateRangePicker
-                startDate={startDate}
-                startDateId="start_date_id"
-                endDate={endDate}
-                endDateId="end_date_id"
-                onDatesChange={({ startDate, endDate }) =>
-                    hundleDateChange(startDate, endDate)
-                }
-                focusedInput={focusedInput}
-                onFocusChange={(focusedInput) => setFocusedInput({ focusedInput })}
-            />
-        </div>
-    );
+        <>
+            <Flex mt={4} onClick={handleToggle} justifyContent="space-between" style={{ border: "1px solid #eee" }}>
+                <Input type="text" style={{ caretColor: "transparent", borderWidth: "0", border: "none" }} cursor="pointer" outline="none" width="255px" value={dateRange} size="sm" />
+                <Box mt={1} pr={3} cursor="pointer">&#128197;</Box>
+            </Flex>
+            {/* <Box as="input" >hello{console.log(state[0].startDate)}</Box> */}
+            <Box style={{ display }}>
+                <DateRangePicker
+                    showDateDisplay={true}
+                    onChange={item => setState([item.selection])}
+                    showSelectionPreview={true}
+                    moveRangeOnFirstSelection={false}
+                    months={2}
+                    ranges={state}
+                    direction="horizontal"
+                />
+            </Box>
+        </>
+    )
+
 }
 
-export default DatePicker;
+export default Datepicker;
