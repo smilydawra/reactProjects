@@ -14,7 +14,7 @@ This App has implemented following features:
 ~ Most of the components are made dynamically so that they can be used as required.
 
 ## `Live Version`
-
+ Live demo [http://sampledashboard.smilydawra.info/]
 
 ## Available Scripts
 
