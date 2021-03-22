@@ -2,12 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import "leaflet/dist/leaflet.css";
+import "bootstrap/dist/css/bootstrap.css";
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import MapView from './components/MapView';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <div class="container my-4">
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={App} />
+        {/* <Route exact path="/mapview" component={MapView} /> */}
+      </Switch>
+    </BrowserRouter>
+  </div>,
   document.getElementById('root')
 );
 

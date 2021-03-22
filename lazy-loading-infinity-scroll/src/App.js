@@ -29,7 +29,7 @@ function App() {
       setLocations((prev) => [...prev, ...newLocations]);
       setLoading(false);
     }
-    setTimeout(loadLocations(), 2000);
+    setTimeout(loadLocations(), 1000);
   }
 
   useEffect(() => {
@@ -43,7 +43,7 @@ function App() {
   };
 
   return (
-    <div class="container my-4">
+    <>
       <h1>Location List View</h1>
       <div class="d-flex flex-wrap justify-content-md-around">
         {locations && locations.map((location, i) => <Card key={i} location={location} />)}
@@ -51,7 +51,7 @@ function App() {
       <div class="my-4 p-4 border border-dark bg-dark">
         <span>{loading && <h4 class="text-light">Loading....</h4>}</span>
       </div>
-    </div>
+    </>
   );
 }
 
